@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import { asset } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,9 +32,9 @@ export const metadata: Metadata = {
     "brown to green",
   ],
   icons: {
-    icon: "/images/logo.png",
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: asset("/images/logo.png"),
+    shortcut: asset("/images/logo.png"),
+    apple: asset("/images/logo.png"),
   },
   openGraph: {
     title: "Base Investments — From brown to green",

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { asset } from "@/lib/site";
 
 const links = [
   { label: "About", href: "#about" },
@@ -34,7 +35,7 @@ export default function Nav() {
         {/* Logo */}
         <a href="#" className="flex items-center group" aria-label="Base Investments — home">
           <Image
-            src="/images/logo.png"
+            src={asset("/images/logo.png")}
             alt="Base Investments"
             width={150}
             height={48}

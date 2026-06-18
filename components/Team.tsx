@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { teamMembers } from "@/lib/data";
+import { asset } from "@/lib/site";
 
 export default function Team() {
   const ref = useRef(null);
@@ -38,7 +39,7 @@ export default function Team() {
               {/* Photo */}
               <div className="aspect-[4/5] relative overflow-hidden bg-zinc-100">
                 <Image
-                  src={member.image}
+                  src={asset(member.image)}
                   alt={member.name}
                   fill
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"

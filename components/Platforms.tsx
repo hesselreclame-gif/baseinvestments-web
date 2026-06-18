@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { ExternalLink, CheckCircle2 } from "lucide-react";
 import { platforms } from "@/lib/data";
+import { asset } from "@/lib/site";
 
 export default function Platforms() {
   const ref = useRef(null);
@@ -93,7 +94,7 @@ export default function Platforms() {
                   style={{ backgroundColor: platform.accentColor }}
                 />
                 <Image
-                  src={platform.logo}
+                  src={asset(platform.logo)}
                   alt={`${platform.name} logo`}
                   width={320}
                   height={120}
